@@ -2,13 +2,7 @@
 
 **Real-time IoT pulse-oximeter and cardiac-monitoring system.** An ESP32 with a MAX30102 fingertip sensor streams heart rate and SpO₂ through Firebase to a Node.js backend and a live React dashboard.
 
-![ESP32](https://img.shields.io/badge/ESP32-PlatformIO-E7352C?logo=espressif&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-Arduino-00599C?logo=cplusplus&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-RTDB_%2B_Firestore-FFCA28?logo=firebase&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-Express_5-339933?logo=nodedotjs&logoColor=white)
-![Socket.IO](https://img.shields.io/badge/Socket.IO-4-010101?logo=socketdotio&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-PlatformIO-E7352C?logo=espressif&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-Arduino-00599C?logo=cplusplus&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-RTDB_%2B_Firestore-FFCA28?logo=firebase&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-Express_5-339933?logo=nodedotjs&logoColor=white) ![Socket.IO](https://img.shields.io/badge/Socket.IO-4-010101?logo=socketdotio&logoColor=white) ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black) ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 
 > Built in 24 hours at the **Zyro hackathon finals** for the **Smart Health** theme (May 2026).
 
@@ -198,8 +192,8 @@ docker compose up --build
 
 | Service | URL | Image |
 | --- | --- | --- |
-| Dashboard (nginx) | http://localhost:8080 | [`adplayer/heartrocks-frontend`](https://hub.docker.com/r/adplayer/heartrocks-frontend) |
-| Backend API | http://localhost:5000 | [`adplayer/heartrocks-backend`](https://hub.docker.com/r/adplayer/heartrocks-backend) |
+| Dashboard (nginx) | `http://localhost:8080` | [`adplayer/heartrocks-frontend`](https://hub.docker.com/r/adplayer/heartrocks-frontend) |
+| Backend API | `http://localhost:5000` | [`adplayer/heartrocks-backend`](https://hub.docker.com/r/adplayer/heartrocks-backend) |
 
 Or run the published images directly:
 
