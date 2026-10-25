@@ -1,1 +1,12 @@
-node_modules
+# Dependencies & build output
+node_modules/
+dist/
+.pio/
+
+# Secrets (never commit these)
+serviceAccountKey.json
+.env
+firmware/include/secrets.h
+
+# Local tooling
+.dist/
