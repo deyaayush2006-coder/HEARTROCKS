@@ -10,3 +10,4 @@ firmware/include/secrets.h
 
 # Local tooling
 .dist/
+/.vscode/
