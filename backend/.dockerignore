@@ -1,0 +1,14 @@
+# Keep the build context small and free of secrets
+node_modules/
+npm-debug.log*
+
+# Secrets are mounted at runtime, never copied into the image
+serviceAccountKey.json
+**/.npmrc
+.env
+.env.*
+*.pem
+*.key
+
+Dockerfile
+.dockerignore

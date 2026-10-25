@@ -1,0 +1,33 @@
+# HEARTROCKS: dashboard + backend in one command
+#
+#   docker compose up --build      # dashboard -> http://localhost:8080, API -> http://localhost:5000
+#   docker compose build && docker compose push   # publish both images to Docker Hub (after `docker login`)
+#
+# The backend needs a Firebase Admin key at backend/serviceAccountKey.json (gitignored).
+# It is mounted read-only at runtime and is never copied into an image.
+# The ESP32 firmware runs on the device itself and writes to Firebase directly, so it is not a service here.
+
+services:
+  backend:
+    build: ./backend
+    image: adplayer/heartrocks-backend:latest
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - type: bind
+        source: ./backend/serviceAccountKey.json
+        target: /app/serviceAccountKey.json
+        read_only: true
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_BACKEND_URL: http://localhost:5000
+    image: adplayer/heartrocks-frontend:latest
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
